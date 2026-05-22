@@ -370,10 +370,7 @@ class AIEngine:
         lines.append(f"📈 القوة: {'قوية' if last['ADX'] > 25 else 'ضعيفة'}")
         lines.append(f"💧 السيولة: {'Premium' if last['Close'] > last['Premium_Zone'] else 'Discount'}")
         if patterns: lines.append(f"🔍 الأنماط: {', '.join(patterns[:3])}")
-        return "
-".join(lines)
-
-
+        return "".join(lines)
 class NewsEngine:
     @staticmethod
     def get_news():
